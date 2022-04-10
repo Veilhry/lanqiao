@@ -1,0 +1,122 @@
+/*
+ TODO：请补充代码
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.upper {
+    width: 100%;
+    height: 427px;
+    background-color: #a6b1e1;
+    margin: auto;
+    padding-top: 13px;
+}
+
+
+
+.nav {
+    width: 1024px;
+    margin: auto;
+    height: 46px;
+    color: white;
+    font-size: 18px;
+
+}
+
+.nav .left {
+    float: left;
+    margin-right: 365px;
+}
+
+.nav ul {
+    float: right;
+    font-size: 16px;
+    color: white;
+}
+
+.nav ul li {
+    float: left;
+    list-style: none;
+    margin-left: 16px;
+}
+
+.main {
+    width: 1024px;
+    height: 427px;
+    margin: auto;
+    text-align: center;
+}
+
+.main .title {
+    font-size: 45px;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 62px;
+}
+
+.main .stack {
+    color: white;
+    font-size: 21px;
+    font-weight: 200;
+    margin-bottom: 36px;
+}
+
+.main .join {
+    color: #efbfbf;
+    border-radius: 2px;
+    display: inline-block;
+    box-shadow: inset 0 0 0 2px #efbfbf;
+    padding: 10px;
+}
+
+.containner {
+    width: 1024px;
+    height: 302px;
+    margin: auto;
+    margin-top: 74px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containner .item {
+    display: flex;
+    width: 100%;
+    height: 144px;
+}
+
+.containner .content {
+    flex: 1;
+    height: 144px;
+    margin-right: 20px;
+    line-height: 1.4em;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.containner .content h2 {
+    font-size: 30px;
+    font-weight: 200;
+    color: black;
+    margin-bottom: 20px
+}
+
+
+.footer {
+    width: 1024px;
+    height: 80px;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+.footer .icon{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid black;
+}

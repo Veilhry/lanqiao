@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>布局切换</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script
+      src="./js/axios.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <!-- TODO：请在下面实现需求 -->
+      <div class="bar" >
+        <a :class="large?'grid-icon active':'grid-icon'" @click="handlelarge"></a>
+        <a :class="small?'list-icon active':'list-icon'" @click="handlesmall" ></a>
+      </div>
+      <!--grid 示例代码，动态渲染时可删除-->
+      <ul class="grid" v-if="large">
+        <li v-for="item in goodsList">
+          <a :href="item.url" target="_blank"> <img :src="item.image.large" /></a>
+        </li>
+      </ul>
+      <ul class="list" v-if="small">
+        <li v-for="item in goodsList">
+          <a :href="item.url" target="_blank"> <img :src="item.image.small" /></a>
+          <p>{{item.title}}</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      goodsList: [],
+      large:true,
+      small:false
+    },
+    methods:{
+      handlelarge(){
+        this.large =true
+        this.small = false
+      },
+      handlesmall(){
+        this.large = false
+        this.small = true
+      }
+    },
+    mounted() {
+      // TODO：补全代码实现需求
+      axios.get('goodsList.json')
+      .then(res=>{
+        this.goodsList=res.data
+      })
+    },
+  });
+</script>
